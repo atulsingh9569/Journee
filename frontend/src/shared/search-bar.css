@@ -1,0 +1,18 @@
+.form-group input{
+    border: none;
+    font-size: 0.9rem;
+    color: var(--heading-color);
+}
+.search-bar{
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    width: max-content;
+}
+.form-group span{
+    font-size: 1.8em;
+    color: #ee6e6e;
+}
+.form-group-fast{
+    border-right: 2px solid #575050;
+}

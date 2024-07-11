@@ -1,0 +1,13 @@
+.subscribe__btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.1em;
+    padding: 1em 2em;
+    border-radius: 2em;
+}
+.subscribe__btn:hover{
+    background-color: #ff6a00;
+}
+input[type="submit"]:visited{
+    outline:none;
+}

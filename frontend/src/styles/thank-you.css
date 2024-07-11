@@ -1,0 +1,21 @@
+.thank-you span i{
+
+    font-size: 4rem;
+    color: rgb(57, 163, 57);
+}
+.thank-you{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+.thank-you button{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+.thank-you button:hover{
+    color: #f5f5f5;
+}
+section{
+    background-color: #f5f5f5;
+    height: 100%;
+
+}

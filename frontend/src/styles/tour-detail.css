@@ -1,0 +1,52 @@
+.tour__info h1{
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+.tour__info h5{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.tour__info{
+    box-shadow: 0 0 4px 4px rgba(41, 40, 40, 0.433);
+}
+.tour-detail-container{
+    width: 60vw;
+}
+.tour__reviews {
+    box-shadow: 0 0 4px 4px rgba(41, 40, 40, 0.433);
+    margin-top: 2em;
+}
+
+.rating{
+   color: var(--secondary-color);
+}
+.tour__reviews span:hover{
+    cursor: pointer;
+}
+.tour__reviews input{
+    width: 100%;
+    outline: hidden;
+    border: none;
+}
+.tour__reviews input:focus{
+    outline: none;
+}
+.tour__reviews .input{
+    box-shadow: 0px 0px 2px 1px var(--secondary-color);
+    border-radius: 2em;
+    padding: 1rem;
+}
+.user__reviews{
+    margin-top: 1rem;
+    width: 48vw;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user__reviews img{
+    width: 3.8rem;
+    height: 3.8rem;
+}
