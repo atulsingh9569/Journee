@@ -3,11 +3,11 @@ import { ListGroup, ListGroupItem, FormGroup,Button } from "reactstrap";
 import './booking.css'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {AuthContext} from '../../context/AuthContext'
 
+const Booking = ({tours, avgRating}) => {
 
-const Booking = ({tour, avgRating}) => {
-
-    const {price, reviews} = tour;
+    const {price, reviews} = tours;
 
     const [credentials, setCredentials] = useState({
         userId: '01',

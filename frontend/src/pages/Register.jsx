@@ -1,23 +1,54 @@
 import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import '../styles/register.css'
-import { useState } from "react";
+import { useState} from "react";
 import userImg from '../assets/images/user.png'
 import registerImg from '../assets/images/register.png'
+import { AuthContext} from "../context/AuthContext";
+import { BASE_URL } from "../utils/config";
+import { useContext } from "react";
+
+
 const Register = () => {
     const [credentials, setCredentials] = useState({
-        fullName:undefined,
-        email:undefined,
-        password:undefined
+        username:'',
+        email:'',
+        password:''
     })
+
+    const {dispatch} = useContext(AuthContext);
+    const navigate = useNavigate();
+
 
     const handleChange = e => {
         setCredentials(prev => ({...prev, [e.target.id]:e.target.value}))
     };
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(credentials)
+        try {
+            const res = await fetch(`${BASE_URL}/auth/register`, {
+                method: "post",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify(credentials),
+            });
+            const textResponse = await res.text();
+            console.log(textResponse); 
+            console.log(res.status);
+            if(!res.ok){
+                alert(textResponse); 
+                return;
+            }
+
+            const result = JSON.parse(textResponse);
+            dispatch({type: 'REGISTER_SUCCESS'})
+            navigate('/login');
+
+        }catch(error){
+            alert(error.message);
+        }
 
     }
 
@@ -37,7 +68,7 @@ const Register = () => {
                                 <h2>Register</h2>
                                 <Form onSubmit={handleSubmit}>
                                     <FormGroup className="">
-                                        <input type="username" placeholder="username" required id="userName" onChange={handleChange}/>
+                                        <input type="username" placeholder="username" required id="username" onChange={handleChange}/>
                                     </FormGroup>
                                     <FormGroup className="">
                                         <input type="email" placeholder="email" required id="email" onChange={handleChange}/>

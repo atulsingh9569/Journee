@@ -6,11 +6,16 @@ import 'remixicon/fonts/remixicon.css'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import {BrowserRouter} from "react-router-dom"
+import { AuthContextProvider } from './context/AuthContext.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+
   <React.StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
+    <AuthContextProvider>
+      <BrowserRouter>
+      <App />
+      </BrowserRouter>
+    </AuthContextProvider>
   </React.StrictMode>,
 )

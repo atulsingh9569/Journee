@@ -13,8 +13,8 @@ const quick__links = [
         display:'About'
     },
     {
-        path :'/tour',
-        display:'Tour'
+        path :'/tours',
+        display:'Tours'
     },
 ]
 const quick__links2 = [

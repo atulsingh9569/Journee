@@ -16,9 +16,9 @@ export const register = async (req,res)=> {
             username: req.body.username,
             email: req.body.email,
             password: hash,
-            photo: req.body.photo
+            // photo: req.body.photo
         })
-
+        console.log(req.body);
         await newUser.save()
         res.status(200).json({success: true, message: "Successfully Registered"})
 

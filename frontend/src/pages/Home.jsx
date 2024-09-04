@@ -14,7 +14,6 @@ import MasonryImageGallery from '../components/ImageGallery/MasonryImageGallery'
 import Testimonial from '../components/Testimonial/Testimonial'
 import NewsLetter from '../shared/NewsLetter'
 
-
 const Home = () => {
     return(
         <>

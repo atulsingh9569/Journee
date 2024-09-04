@@ -28,11 +28,11 @@ const TourCard = ({tour}) => {
                         {totalRating === 0 ? ('Not Rated') : (<span>({tour.reviews.length})</span>)}
                     </span>
                 </div>
-                <h5 className='tour__title'><Link to={`/tour/${tour.id}`}>{tour.title}</Link></h5>
+                <h5 className='tour__title'><Link to={`/tours/${tour._id}`}>{tour.title}</Link></h5>
                 <div className='tour__price flex justify-between font-medium'>
                     <h5>${tour.price}<span>/per person</span></h5>
                 <Button className='btn booking__btn'>
-                    <Link to={`/tour/${tour.id}`}>Book Now</Link>
+                    <Link to={`/tours/${tour._id}`}>Book Now</Link>
                 </Button>
                 </div>
             </CardBody>

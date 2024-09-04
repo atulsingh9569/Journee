@@ -1,9 +1,10 @@
-.pagination{
+.pagination {
     display: flex;
     justify-content: center;
-    width: 90vw;
+    margin-top: 20px;
 }
-.pagination span{
+
+.pagination span {
     width: 2rem;
     height: 2rem;
     padding: 5px;
@@ -16,11 +17,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
-.pagination span:hover{
+.pagination span:hover {
     background-color: var(--secondary-color);
 }
-.active__page{
+
+.active__page {
     background-color: var(--secondary-color);
+    color: white;
 }
