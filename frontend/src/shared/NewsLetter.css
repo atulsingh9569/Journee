@@ -6,7 +6,7 @@
     border-radius: 2em;
 }
 .subscribe__btn:hover{
-    background-color: #ff6a00;
+    background-color: #a667bd;
 }
 input[type="submit"]:visited{
     outline:none;

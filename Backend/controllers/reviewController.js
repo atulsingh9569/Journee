@@ -26,5 +26,5 @@ export const createReview = async(req,res) => {
             success: false,
             message: "failed to submit the review",
         })
-    }
+    } 
 }
